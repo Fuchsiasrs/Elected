@@ -25,7 +25,7 @@ const mapping = {
 
 exports.run = function(client, message, args) {
 
-	if (args.length < 1) return message.reply('Lütfen bir mesaj belirt. **Doğru Kullanım**: ?emojiyazı <mesaj>')
+	if (args.length < 1) return message.reply('Lütfen bir mesaj belirt. **Doğru Kullanım**: e!emoji <mesaj>')
 		
 	message.channel.send(args.join(' ').split('').map(c => mapping[c] || c).join(' '));
 
@@ -39,7 +39,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'emojiyazı', 
+  name: 'emoji', 
   description: 'Mesajınızı emoji haline getirir',
-  usage: 'emojiyazı <mesaj>'
+  usage: 'emoji <mesaj>'
 };
